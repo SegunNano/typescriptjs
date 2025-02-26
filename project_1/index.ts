@@ -94,13 +94,12 @@ enum PeoplePlaces {
     Micah = 'Akoka'//2
 }
 
-// function placeTextGen(name: string): void {
-//     console.log(`Mr ${name} stays at ${PeoplePlaces[name]}.`)
-// }
+function placeTextGen(name: keyof typeof PeoplePlaces): void {
+    console.log(`Mr ${name} stays at ${PeoplePlaces[name]}.`);
+}
 
-// placeTextGen('Micah')
-// Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'typeof PeoplePlaces'.
-//   No index signature with a parameter of type 'string' was found on type 'typeof PeoplePlaces'.
+placeTextGen('Micah');
+
 
 
 class Person {
